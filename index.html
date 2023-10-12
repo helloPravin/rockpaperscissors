@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock,Paper&Scissors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+  <div>
+    <h1>Rock, Paper & Scissors</h1>
+  </div>
+
+
+  <div id="toggleThemeCenter"><button id="toggleButton"><span id="toggleIcon" class="material-symbols-rounded">
+        dark_mode
+      </span></button>
+
+    <div id="resetToastMessage" style="visibility: hidden;">
+      <span class="material-symbols-rounded">
+        device_reset
+      </span>Reset Score Sucess
+    </div>
+  </div>
+
+
+  <div class="GameCenter"><button class="userMove-buttons" onclick="
+
+  moves.UserMove='Rock';
+  
+  ComputerMove();
+  userChooses('&#9994');
+  checkResult();
+
+  showCurrentResult();
+  updateScore();
+
+  logResult();
+  "><span class="emoji">&#9994</span></button>
+    <button class="userMove-buttons" onclick="
+  
+  moves.UserMove='Paper';
+
+  ComputerMove();
+  userChooses('&#9995');
+  checkResult();
+
+  showCurrentResult();
+  updateScore();
+  
+  logResult();
+  "><span class="emoji">&#9995</span></button>
+    <button class="userMove-buttons" onclick="
+
+  moves.UserMove='Scissors';
+
+  ComputerMove();
+  userChooses('&#9996');
+  checkResult();
+
+  showCurrentResult();
+  updateScore();
+
+  logResult();
+  "><span class="emoji">&#9996</span></button>
+
+  </div><br>
+
+  <div class="eachEventCenter">
+    Your Move:<span id="whatUserMove"> . </span> <strong> :: </strong> <span id="whatComputerMove"> . </span>:Computer's
+    Move
+  </div><br>
+
+  <div class="currentResultCenter">Result:<strong><span id="currentResult">Best of Luck</span></strong></div><br>
+
+  <div class="finalScoreBoard">Score Board : Wins: <span id="wins">0</span> Losses: <span id="losses">0</span> Ties:
+    <span id="ties">0</span><br><br>
+    <button id="reset-button" onclick="
+    
+    score.Wins=0;
+    score.Losses=0;
+    score.Ties=0;
+    wins.innerText=`${score.Wins}`;
+    losses.innerText=`${score.Losses}`;
+    ties.innerText=`${score.Ties}`;
+    currentResult.innerText='Best of Luck(again!)';
+    resetToastNotification();
+    console.log('Score was reset');
+    ">
+      <strong>Reset Score</strong></button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
