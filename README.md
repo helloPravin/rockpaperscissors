@@ -1,2 +1,2 @@
 # OMGGGames
-This is my first project "OMGGGames" which is being pushed on GitHub.
+This is my first project 'Rock, Paper & Scissors' which is being pushed on GitHub.
